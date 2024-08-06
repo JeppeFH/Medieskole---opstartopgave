@@ -215,16 +215,34 @@
       </section>
     </section>
 
-    <!-- Section [name] -->
-    <section class=""></section>
+    <!-- Section [Contact] -->
+    <section class="contact">
+      <h1>Kontakt os</h1>
 
-    <!-- Section [name] -->
-    <section class=""></section>
-
-    <!-- Section [name] -->
-    <section class=""></section>
-
-    <!-- Section [Footer] -->
-    <footer></footer>
+      <form class="contactContainer">
+        <input
+          id="nameInput"
+          type="text"
+          placeholder="NAVN"
+          required
+          minlength="2"
+        />
+        <input
+          id="mailInput"
+          type="email"
+          placeholder="E-MAIL"
+          minlength="6"
+          required
+        />
+        <textarea
+          id="textArea"
+          placeholder="BESKED..."
+          required
+          minlength="10"
+          maxlength="5000"
+        ></textarea>
+        <button id="submitInput" type="submit">SEND BESKED</button>
+      </form>
+    </section>
   </body>
 </html>

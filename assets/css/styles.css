@@ -11,13 +11,14 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 /*Heading sizes*/
 h1 {
   font-size: 4rem;
   font-family: "Abril Fatface", serif;
+  text-align: center;
 }
 
 h2 {
@@ -238,6 +239,10 @@ nav i {
   margin-bottom: 115px;
 }
 
+.our-products p {
+  line-height: 1.2;
+}
+
 .our-products-container-flex {
   display: flex;
   gap: 47px;
@@ -303,7 +308,73 @@ nav i {
   padding-bottom: 2px;
 }
 
-/*Section [name]*/
+/*Section [Contact]*/
+.contact {
+  max-width: 100%;
+  background-color: #e6e6e6;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact h1 {
+  padding-top: 120px;
+  margin-bottom: 70px;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 200px;
+}
+
+.contactContainer input {
+  font-family: "Raleway", sans-serif;
+  background-color: #e6e6e6;
+  margin: 0 auto;
+  width: 35%;
+  height: 35px;
+  color: black;
+  font-weight: 500;
+  padding: 0 19px;
+  border: 1px solid black;
+}
+
+.contactContainer input:nth-of-type(1) {
+  margin-bottom: 34px;
+}
+
+.contactContainer input:nth-of-type(2) {
+  margin-bottom: 21px;
+}
+
+.contactContainer textarea {
+  font-family: "Raleway", sans-serif;
+  padding: 13px 19px;
+  background-color: #e6e6e6;
+  margin: 0 auto;
+  width: 35%;
+  height: 120px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  border: 1px solid black;
+}
+
+#submitInput {
+  font-family: "Raleway", sans-serif;
+  background-color: black;
+  margin: 0 auto;
+  width: 35%;
+  height: 35px;
+  color: rgb(234, 234, 234);
+  font-weight: 300;
+  border: none;
+}
+
+#submitInput:hover {
+  background-color: rgb(53, 53, 53);
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
 
 /*Section [name]*/
 
@@ -347,4 +418,12 @@ nav i {
   /*Section [name]*/
 
   /*Section [Footer]*/
+}
+
+@media screen and (max-width: 1024px) {
+  .recommended-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+  }
 }
