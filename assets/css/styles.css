@@ -16,31 +16,31 @@ body {
 
 /*Heading sizes*/
 h1 {
-  font-size: ;
+  font-size: 6rem;
 }
 
 h2 {
-  font-size: ;
+  font-size: 4.5rem;
 }
 
 h3 {
-  font-size: ;
+  font-size: 3.5rem;
 }
 
 h4 {
-  font-size: ;
+  font-size: 3rem;
 }
 
 h5 {
-  font-size: ;
+  font-size: 2.5rem;
 }
 
 h6 {
-  font-size: ;
+  font-size: 2rem;
 }
 
 p {
-  font-size: ;
+  font-size: 1.6rem;
 }
 
 li,
@@ -201,31 +201,31 @@ nav i {
 @media screen and (max-width: 768px) {
   /*Heading sizes*/
   h1 {
-    font-size: ;
+    font-size: 5rem;
   }
 
   h2 {
-    font-size: ;
+    font-size: 4rem;
   }
 
   h3 {
-    font-size: ;
+    font-size: 3rem;
   }
 
   h4 {
-    font-size: ;
+    font-size: 2.5rem;
   }
 
   h5 {
-    font-size: ;
+    font-size: 2rem;
   }
 
   h6 {
-    font-size: ;
+    font-size: 1.8rem;
   }
 
   p {
-    font-size: ;
+    font-size: 1.4rem;
   }
 
   /*Section [Hero]*/
@@ -236,5 +236,5 @@ nav i {
 
   /*Section [name]*/
 
-  /*Footer*/
+  /*Section [Footer]*/
 }
