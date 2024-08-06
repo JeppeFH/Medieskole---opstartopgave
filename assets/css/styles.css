@@ -231,11 +231,25 @@ nav i {
   padding-top: 170px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.our-products h1 {
+  margin-bottom: 115px;
 }
 
 .our-products-container-flex {
   display: flex;
   gap: 47px;
+}
+
+.our-products-container article {
+  margin-bottom: 60px;
+}
+
+.our-products-container article h3 {
+  margin-bottom: 40px;
+  margin-left: 125px;
 }
 
 .our-products-container-flex img {
@@ -244,7 +258,50 @@ nav i {
   align-self: center;
 }
 
-/*Section [name]*/
+/*Section [Recommended]*/
+.recommended {
+  background-color: #444444;
+  max-width: 100%;
+  padding-bottom: 156px;
+}
+
+.recommended h1 {
+  text-align: center;
+  padding-top: 156px;
+  margin-bottom: 90px;
+  color: white;
+  font-weight: 500;
+}
+
+.recommended-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.recommended-container article {
+  display: flex;
+  flex-direction: column;
+}
+
+.recommended-container p,
+.recommended-container h4 {
+  padding-left: 24px;
+  background-color: white;
+}
+
+.recommended-container h4 {
+  padding-bottom: 33px;
+}
+
+.recommended-container p:nth-of-type(1) {
+  padding-top: 24px;
+}
+
+.recommended-container p:nth-of-type(2) {
+  padding-bottom: 2px;
+}
 
 /*Section [name]*/
 
