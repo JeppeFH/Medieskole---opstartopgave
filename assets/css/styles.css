@@ -94,12 +94,7 @@ nav a {
   font-family: "Raleway", sans-serif;
 }
 
-.nav-links a:hover {
-  color: rgb(18, 18, 18);
-  transition: all 250ms ease-in-out;
-}
-
-nav i {
+.nav-links i {
   font-size: 3.5rem;
 }
 
@@ -107,23 +102,7 @@ nav i {
 .burgerMenuClose {
   display: none;
   color: white;
-}
-
-.btn {
-  display: inline-block;
-  padding: 13px 35px;
-  font-size: 1.6rem;
-  border-radius: 15px;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  background-color: tomato;
-  cursor: pointer;
-}
-
-.btn:hover {
-  transition: all 250ms ease-in-out;
+  font-size: 3.5rem;
 }
 
 .nav-links a {
@@ -137,8 +116,8 @@ nav i {
   height: 2px;
   width: 0;
   display: block;
-  margin-top: 7px;
-  background-color: white;
+  margin-top: 5px;
+  background-color: black;
   transition: all 300ms ease-in-out;
 }
 
@@ -152,16 +131,29 @@ nav i {
     justify-content: space-between;
   }
 
+  .top-nav {
+    gap: 10px;
+    height: 80px;
+  }
+
+  .top-nav p {
+    font-size: 1.4rem;
+  }
+
+  .fa-truck {
+    font-size: 1.6rem;
+  }
+
   .nav-links {
     position: relative;
     max-width: 100%;
     height: 100px;
-    background-color: rgb(42, 42, 42);
+    background-color: white;
     align-items: center;
     margin: 0 auto;
     display: none;
     flex-direction: column;
-    top: 100px;
+    top: 80px;
     gap: 10px;
   }
 
@@ -171,11 +163,19 @@ nav i {
     width: 100%;
     height: auto;
     padding: 20px 0 20px 0;
+    height: 150px;
+    justify-content: center;
+  }
+
+  .nav-links li {
+    margin-bottom: 5px;
   }
 
   .burgerMenuOpen {
     display: block;
-    margin-right: 20px;
+    position: absolute;
+    top: 22px;
+    right: 20px;
   }
 
   .burgerMenuOpen.active {
@@ -184,11 +184,15 @@ nav i {
 
   .burgerMenuClose {
     display: none;
-    margin-right: 20px;
   }
 
   .burgerMenuClose.active {
     display: block;
+    justify-content: flex-end;
+    display: flex;
+    position: absolute;
+    top: 22px;
+    right: 20px;
   }
 }
 
@@ -376,12 +380,6 @@ nav i {
   cursor: pointer;
 }
 
-/*Section [name]*/
-
-/*Section [name]*/
-
-/*Section [Footer]*/
-
 /*Responsive*/
 @media screen and (max-width: 768px) {
   /*Heading sizes*/
@@ -408,16 +406,6 @@ nav i {
   p {
     font-size: 1.2rem;
   }
-
-  /*Section [Hero]*/
-
-  /*Section [name]*/
-
-  /*Section [name]*/
-
-  /*Section [name]*/
-
-  /*Section [Footer]*/
 }
 
 @media screen and (max-width: 1024px) {
