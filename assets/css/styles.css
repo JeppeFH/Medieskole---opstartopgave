@@ -40,6 +40,12 @@ h4 {
   font-weight: 400;
 }
 
+h5 {
+  font-size: 1.3rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+
 p {
   font-size: 1.4rem;
   font-family: "Raleway", sans-serif;
@@ -78,12 +84,12 @@ nav {
 nav ul {
   display: flex;
   background-color: white;
-  gap: 100px;
+  gap: 80px;
   list-style: none;
   height: 60px;
   align-items: center;
   justify-content: end;
-  margin-right: 100px;
+  margin-right: 317px;
 }
 
 nav a {
@@ -93,9 +99,94 @@ nav a {
   font-family: "Raleway", sans-serif;
 }
 
-.nav-links i {
-  font-size: 3.5rem;
+/*Shopping cart*/
+.cart-box {
+  position: absolute;
+  top: 68px;
+  z-index: 999;
+  width: 30% !important;
+  border: 1px solid pink;
 }
+
+.cart-icon {
+  font-size: 2.2rem;
+  padding: 10px 10px;
+  text-align: right;
+}
+
+.whole-cart-window h4 {
+  padding: 15px 10px;
+}
+
+.cart-wrapper {
+  overflow-y: auto;
+  max-height: 350px;
+}
+
+.subtotal {
+  text-align: right;
+  padding: 5%;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.checkout,
+.view-cart {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  font-size: 1.4rem;
+  margin: 10px auto;
+  padding: 6px 15px;
+}
+
+.view-cart {
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 3fr 6fr 1fr;
+  padding: 5% 2%;
+  border-bottom: solid 1px lightgray;
+  gap: 10px;
+}
+
+.cart-item img {
+  width: 120%;
+}
+
+.cart-item .details {
+  padding-left: 10%;
+}
+
+.details p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.cart-item h5 {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.cart-item .price {
+  display: block;
+  font-size: 1.3rem;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.quantity {
+  display: block;
+  margin-top: 10px;
+}
+
+/*Shopping cart*/
 
 .burgerMenuOpen,
 .burgerMenuClose {
@@ -104,12 +195,12 @@ nav a {
   font-size: 3.5rem;
 }
 
-.nav-links a {
+.nav-links a:not(.cart-btn) {
   display: inline-block;
   position: relative;
 }
 
-.nav-links a::after {
+.nav-links a:not(.cart-btn):after {
   position: absolute;
   content: "";
   height: 2px;
