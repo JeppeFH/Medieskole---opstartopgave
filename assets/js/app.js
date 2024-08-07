@@ -2,24 +2,65 @@
 let burgerMenuOpen = document.querySelector(".burgerMenuOpen");
 let burgerMenuClose = document.querySelector(".burgerMenuClose");
 let navLinks = document.querySelector(".nav-links");
-/*Let = En literal der bruges til at deklarere en variabel.*/
-/*document = kobler det til ens html */
-/*querySelector =  Søger efter elementer i dokumentet, 
-der har class eller id*/
 
 burgerMenuOpen.addEventListener("click", () => {
-  /*Fortæller at der skal være en Click event listener på array'en*/
   navLinks.classList.add("active");
   burgerMenuOpen.classList.add("active");
   burgerMenuClose.classList.add("active");
-  /*Laver en classList på arrays for at manipulere class samtidig 
-  en add("active") på for så at kunne manipulere class i css. */
 });
 
 burgerMenuClose.addEventListener("click", () => {
   navLinks.classList.remove("active");
   burgerMenuOpen.classList.remove("active");
   burgerMenuClose.classList.remove("active");
-  /*Laver et click event på burgermenuclose som remover active class ved 
-  click. */
+});
+
+//Mail validering
+let nameInput = document.querySelector("#nameInput");
+let mailInput = document.querySelector("#mailInput");
+let textArea = document.querySelector("#textArea");
+let submitInput = document.querySelector("#submitInput");
+let pushMessage = document.querySelector("#pushMessage");
+
+// Initialiser variabler
+let isValid = true;
+let errorMessage = [];
+
+submitInput.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  // Valider navn
+  if (nameInput.value.trim() === "") {
+    isValid = false;
+    nameInput.classList.add("Error");
+    errorMessage.push("Skriv dit navn");
+  } else {
+    nameInput.classList.remove("Error");
+  }
+
+  // Valider E-mail
+  if (mailInput.value.trim() === "") {
+    isValid = false;
+    mailInput.classList.add("Error");
+    errorMessage.push("Skriv din E-mail");
+  } else {
+    mailInput.classList.remove("Error");
+  }
+
+  // Valider Textarea
+  if (textArea.value.trim() === "") {
+    isValid = false;
+    textArea.classList.add("Error");
+    errorMessage.push("Skriv noget tekst");
+  } else {
+    textArea.classList.remove("Error");
+  }
+
+  if (isValid) {
+    pushMessage.classList.add("active");
+    nameInput.classList.add("active");
+    mailInput.classList.add("active");
+    textArea.classList.add("active");
+    submitInput.classList.add("active");
+  }
 });
