@@ -445,15 +445,17 @@ nav a {
 .fa-envelope {
   font-size: 6rem;
   margin-top: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 #pushMessage p {
   font-size: 1.6rem;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 #pushMessage a {
+  display: flex;
+  gap: 10px;
   display: inline-block;
   padding: 10px 35px;
   font-size: 1.4rem;
