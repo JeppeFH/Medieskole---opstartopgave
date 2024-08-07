@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --after-content: "2";
+}
+
 html {
   font-size: 62.5%;
 }
@@ -99,7 +103,7 @@ nav a {
   font-family: "Raleway", sans-serif;
 }
 
-/*Shopping cart*/
+/*Shopping-cart start*/
 .cart-box {
   position: absolute;
   top: 68px;
@@ -151,7 +155,7 @@ nav a {
 .cart-item {
   display: grid;
   grid-template-columns: 3fr 6fr 1fr;
-  padding: 5% 2%;
+  padding: 5% 0;
   border-bottom: solid 1px lightgray;
   gap: 10px;
 }
@@ -186,7 +190,36 @@ nav a {
   margin-top: 10px;
 }
 
-/*Shopping cart*/
+.whole-cart-window {
+  border: solid lightgray 1px;
+  border-top: none;
+  position: fixed;
+  padding: 0px 7px;
+  top: 110px;
+  background-color: white;
+  margin-right: 2%;
+}
+
+.hide-shopping-list {
+  display: none;
+}
+
+.none-empty::after {
+  content: var(--after-content);
+  font-size: 1rem;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  top: -20px;
+  right: 20%;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  align-content: center;
+}
+/*Shopping-cart end*/
 
 .burgerMenuOpen,
 .burgerMenuClose {
@@ -444,6 +477,22 @@ nav a {
 
 .recommended-container p:nth-of-type(2) {
   padding-bottom: 2px;
+}
+
+.recommended-container article .add-to-cart-btn {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.recommended-container article .add-to-cart-btn:hover {
+  background-color: #eaeaea;
+  transition: all 250ms ease-in-out;
+  color: black;
 }
 
 /*Section [Contact]*/
