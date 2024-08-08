@@ -3,33 +3,6 @@ let burgerMenuOpen = document.querySelector(".burgerMenuOpen");
 let burgerMenuClose = document.querySelector(".burgerMenuClose");
 let navLinks = document.querySelector(".nav-links");
 
-let wholeCartWindow = document.querySelector(".whole-cart-window");
-let hideShoppingList = document.querySelector(".hide-shopping-list");
-let faBasketShopping = document.querySelector(".fa-basket-shopping");
-
-burgerMenuOpen.addEventListener("click", () => {
-  navLinks.classList.add("active");
-  burgerMenuOpen.classList.add("active");
-  burgerMenuClose.classList.add("active");
-
-  wholeCartWindow.classList.remove("active");
-});
-
-burgerMenuClose.addEventListener("click", () => {
-  navLinks.classList.remove("active");
-  burgerMenuOpen.classList.remove("active");
-  burgerMenuClose.classList.remove("active");
-
-  wholeCartWindow.classList.remove("active");
-});
-
-faBasketShopping.addEventListener("click", () => {
-  wholeCartWindow.classList.toggle("active");
-  navLinks.classList.remove("active");
-  burgerMenuClose.classList.remove("active");
-  burgerMenuOpen.classList.remove("active");
-});
-
 //Mail validering
 let nameInput = document.querySelector("#nameInput");
 let mailInput = document.querySelector("#mailInput");
@@ -80,8 +53,41 @@ submitInput.addEventListener("click", (event) => {
   }
 });
 
-/*Shopping list*/
-let cartIcon = document.querySelector(".cart-icon");
+/*Shopping cart*/
+
+/*Show Shopping list on mouse over*/
+let wholeCartWindow = document.querySelector(".whole-cart-window");
+let cartIcon = document.querySelector(".fa-basket-shopping");
+/*state that says that shopping list isn't visible */
+wholeCartWindow.inWindow = 0;
+
+/*Shows list when mouse over*/
+cartIcon.addEventListener("mouseover", () => {
+  if (wholeCartWindow.classList.contains("hide-shopping-list"))
+    wholeCartWindow.classList.remove("hide-shopping-list");
+});
+
+/*Hides when mouse leaves shopping list */
+cartIcon.addEventListener("mouseleave", () => {
+  /*when mouse hover over shopping list make it "sleep" for 0,5s */
+  setTimeout(() => {
+    /*if shopping list is 0 (not hovered over) remove list */
+    if (wholeCartWindow.inWindow === 0) {
+      wholeCartWindow.classList.add("hide-shopping-list");
+    }
+  }, 500);
+});
+
+/*When hovering over the shopping list chance from 0 to 1 (1= visible) */
+wholeCartWindow.addEventListener("mouseover", () => {
+  wholeCartWindow.inWindow = 1;
+});
+
+/*when mouse leave list, inWindow = 0, hide list */
+wholeCartWindow.addEventListener("mouseleave", () => {
+  wholeCartWindow.inWindow = 0;
+  wholeCartWindow.classList.add("hide-shopping-list");
+});
 
 let cancel = document.querySelectorAll(".cancel");
 let quantity = document.querySelectorAll(".quantity");
