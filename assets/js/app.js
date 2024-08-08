@@ -64,3 +64,9 @@ submitInput.addEventListener("click", (event) => {
     submitInput.classList.add("active");
   }
 });
+
+let cartIcon = document.querySelector(".cart-icon");
+let wholeCartWindow = document.querySelector(".whole-cart-window");
+let cancel = document.querySelectorAll(".cancel");
+let quantity = document.querySelectorAll(".quantity");
+let subtotal = document.querySelector(".subtotal");
