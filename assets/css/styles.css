@@ -408,6 +408,11 @@ nav a {
   .whole-cart-window h4 {
     margin-top: 10px;
   }
+
+  .cart-icon {
+    position: relative;
+    top: 8px;
+  }
 }
 
 /*Section [Hero]*/

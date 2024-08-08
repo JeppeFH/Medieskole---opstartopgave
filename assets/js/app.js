@@ -65,6 +65,7 @@ submitInput.addEventListener("click", (event) => {
   }
 });
 
+/*Shopping list*/
 let cartIcon = document.querySelector(".cart-icon");
 let wholeCartWindow = document.querySelector(".whole-cart-window");
 let hideShoppingList = document.querySelector(".hide-shopping-list");
@@ -74,7 +75,5 @@ let quantity = document.querySelectorAll(".quantity");
 let subtotal = document.querySelector(".subtotal");
 
 faBasketShopping.addEventListener("click", () => {
-  for (let i = 0; i < faBasketShopping; i++) {
-    hideShoppingList.classList.add("active");
-  }
+  wholeCartWindow.classList.toggle("active");
 });
