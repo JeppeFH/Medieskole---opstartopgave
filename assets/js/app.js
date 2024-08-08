@@ -67,6 +67,14 @@ submitInput.addEventListener("click", (event) => {
 
 let cartIcon = document.querySelector(".cart-icon");
 let wholeCartWindow = document.querySelector(".whole-cart-window");
+let hideShoppingList = document.querySelector(".hide-shopping-list");
+let faBasketShopping = document.querySelector(".fa-basket-shopping");
 let cancel = document.querySelectorAll(".cancel");
 let quantity = document.querySelectorAll(".quantity");
 let subtotal = document.querySelector(".subtotal");
+
+faBasketShopping.addEventListener("click", () => {
+  for (let i = 0; i < faBasketShopping; i++) {
+    hideShoppingList.classList.add("active");
+  }
+});

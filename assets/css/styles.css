@@ -120,8 +120,32 @@ nav a {
 
 .cart-icon {
   font-size: 2.2rem;
-  padding: 8px 0px;
   text-align: right;
+}
+
+.fa-basket-shopping {
+  cursor: pointer;
+  transition: transform 100ms ease-in-out;
+}
+
+.fa-basket-shopping:hover {
+  animation: wiggle 500ms ease-in-out;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
 }
 
 .whole-cart-window h4 {
@@ -221,6 +245,10 @@ nav a {
 
 .hide-shopping-list {
   display: none;
+}
+
+.hide-shopping-list.active {
+  display: block;
 }
 
 .none-empty::after {
