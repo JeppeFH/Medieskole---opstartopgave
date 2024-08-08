@@ -3,16 +3,31 @@ let burgerMenuOpen = document.querySelector(".burgerMenuOpen");
 let burgerMenuClose = document.querySelector(".burgerMenuClose");
 let navLinks = document.querySelector(".nav-links");
 
+let wholeCartWindow = document.querySelector(".whole-cart-window");
+let hideShoppingList = document.querySelector(".hide-shopping-list");
+let faBasketShopping = document.querySelector(".fa-basket-shopping");
+
 burgerMenuOpen.addEventListener("click", () => {
   navLinks.classList.add("active");
   burgerMenuOpen.classList.add("active");
   burgerMenuClose.classList.add("active");
+
+  wholeCartWindow.classList.remove("active");
 });
 
 burgerMenuClose.addEventListener("click", () => {
   navLinks.classList.remove("active");
   burgerMenuOpen.classList.remove("active");
   burgerMenuClose.classList.remove("active");
+
+  wholeCartWindow.classList.remove("active");
+});
+
+faBasketShopping.addEventListener("click", () => {
+  wholeCartWindow.classList.toggle("active");
+  navLinks.classList.remove("active");
+  burgerMenuClose.classList.remove("active");
+  burgerMenuOpen.classList.remove("active");
 });
 
 //Mail validering
@@ -67,13 +82,7 @@ submitInput.addEventListener("click", (event) => {
 
 /*Shopping list*/
 let cartIcon = document.querySelector(".cart-icon");
-let wholeCartWindow = document.querySelector(".whole-cart-window");
-let hideShoppingList = document.querySelector(".hide-shopping-list");
-let faBasketShopping = document.querySelector(".fa-basket-shopping");
+
 let cancel = document.querySelectorAll(".cancel");
 let quantity = document.querySelectorAll(".quantity");
 let subtotal = document.querySelector(".subtotal");
-
-faBasketShopping.addEventListener("click", () => {
-  wholeCartWindow.classList.toggle("active");
-});
