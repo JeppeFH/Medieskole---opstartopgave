@@ -88,12 +88,19 @@ nav {
 nav ul {
   display: flex;
   background-color: white;
-  gap: 80px;
+  gap: 45px;
   list-style: none;
-  height: 60px;
   align-items: center;
   justify-content: end;
   margin-right: 317px;
+}
+
+.a-contact {
+  margin-right: 10px;
+}
+
+nav ul:not(:nth-of-type(2)) {
+  height: 60px;
 }
 
 nav a {
@@ -107,14 +114,14 @@ nav a {
 .cart-box {
   position: absolute;
   top: 68px;
-  z-index: 999;
-  width: 30% !important;
+  z-index: 998;
+  width: 295px !important;
   border: 1px solid pink;
 }
 
 .cart-icon {
   font-size: 2.2rem;
-  padding: 10px 10px;
+  padding: 8px 0px;
   text-align: right;
 }
 
@@ -144,6 +151,13 @@ nav a {
   font-size: 1.4rem;
   margin: 10px auto;
   padding: 6px 15px;
+}
+
+.checkout:hover,
+.view-cart:hover {
+  transition: all 250ms ease-in-out;
+  transform: scale(1.03);
+  font-weight: bold;
 }
 
 .view-cart {
@@ -188,6 +202,12 @@ nav a {
 .quantity {
   display: block;
   margin-top: 10px;
+}
+
+.fa-square-xmark:hover {
+  cursor: pointer;
+  color: red;
+  transition: all 100ms ease-in-out;
 }
 
 .whole-cart-window {
@@ -261,10 +281,14 @@ nav a {
 
   .top-nav p {
     font-size: 1.4rem;
+    position: relative;
+    right: 200px;
   }
 
   .fa-truck {
     font-size: 1.6rem;
+    position: relative;
+    right: 200px;
   }
 
   .nav-links {
@@ -318,6 +342,46 @@ nav a {
     top: 22px;
     right: 20px;
   }
+
+  /*Shopping-cart*/
+
+  .cart-box {
+    top: 18px;
+    width: 250px !important;
+    color: white;
+  }
+
+  .cart-icon {
+    font-size: 2.4rem;
+  }
+
+  .whole-cart-window {
+    padding: 0px 7px;
+    top: 80px;
+    background-color: black;
+    margin-right: 2%;
+  }
+
+  .checkout {
+    background-color: white;
+    color: black;
+  }
+
+  .view-cart {
+    border: 0px solid black;
+  }
+
+  .whole-cart-window {
+    margin-right: 9%;
+  }
+}
+
+.none-empty::after {
+  font-size: 0.8rem;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  color: black;
 }
 
 /*Section [Hero]*/
