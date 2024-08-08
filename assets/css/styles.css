@@ -150,6 +150,7 @@ nav a {
 
 .whole-cart-window h4 {
   padding: 15px 10px;
+  margin-top: 10px;
 }
 
 .cart-wrapper {
@@ -405,13 +406,13 @@ nav a {
     color: black;
   }
 
-  .whole-cart-window h4 {
-    margin-top: 10px;
-  }
-
   .cart-icon {
     position: relative;
     top: 8px;
+  }
+
+  .whole-cart-window h4 {
+    margin-top: 25px;
   }
 }
 
