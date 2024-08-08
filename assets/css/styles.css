@@ -280,6 +280,7 @@ nav a {
   display: none;
   color: white;
   font-size: 3.5rem;
+  cursor: pointer;
 }
 
 .nav-links a:not(.cart-btn) {
