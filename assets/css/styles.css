@@ -689,10 +689,10 @@ nav a {
   margin-top: 50px;
 }
 
-.fa-envelope {
-  font-size: 6rem;
-  margin-top: 30px;
-  margin-bottom: 20px;
+#pushMessage a:hover {
+  background-color: white;
+  transition: all 250ms ease-in-out;
+  color: black;
 }
 
 #pushMessage p {
@@ -715,10 +715,10 @@ nav a {
   border: 2px solid #24292e;
 }
 
-#pushMessage a:hover {
-  background-color: white;
-  transition: all 250ms ease-in-out;
-  color: black;
+.fa-envelope {
+  font-size: 6rem;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 #pushMessage.active {
